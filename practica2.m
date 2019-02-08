@@ -14,3 +14,14 @@ subplot(3,1,2);
 plot(t1,sweep1), title('Sampling at 256.'), xlabel('time(s)'), ylabel('Amplitude');
 subplot(3,1,3);
 plot(t2,sweep2), title('Sampling at 1024.'), xlabel('time(s)'), ylabel('Amplitude');
+
+figure
+plot(t, bi_sweep)
+
+%% Ejercicio 2
+figure
+z1 = sweep' * sweep;
+imshow(z1,[])
+figure
+z = bi_sweep' * bi_sweep;
+imshow(bi_sweep',[])
