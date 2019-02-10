@@ -14,12 +14,12 @@ function [t, linear_sweep, space_sweep] = barrido( fi, ff, m )
     sampling = (ff - fi)/m; % Assuming normalized freq
     t = fi: sampling: (ff-sampling); % Times per cycle
     a = t.^2; % a factor
-    linear_sweep = sin(a);
+    linear_sweep = sin(a)+1;
     
     % Bidimensional sweeping
     [X,Y] = meshgrid(t);
     space = sqrt(X.^2 + Y.^2);
-    space_sweep = sin(space .^ 2);
+    space_sweep = sin(space .^ 2)+1;
 
     
 end

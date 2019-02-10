@@ -20,8 +20,34 @@ plot(t, bi_sweep)
 
 %% Ejercicio 2
 figure
+sweep = (sweep/2);
+sweep1 = (sweep1/2);
+sweep2 = (sweep2/2);
 z1 = sweep' * sweep;
-imshow(z1,[])
+z2 = sweep1' * sweep1;
+z3 = sweep2' * sweep2;
+subplot(1,3,1);
+imshow(z1,[]);
+title('32');
+subplot(1,3,2);
+imshow(z2,[]);
+title('256');
+subplot(1,3,3);
+imshow(z3,[]);
+title('1024');
 figure
-z = bi_sweep' * bi_sweep;
-imshow(bi_sweep',[])
+bi_sweep = bi_sweep/2;
+bi_sweep1 = bi_sweep1/2;
+bi_sweep2 = bi_sweep2/2;
+%s = bi_sweep' * bi_sweep;
+%s1 = bi_sweep1' * bi_sweep1;
+%s2 = bi_sweep2' * bi_sweep2;
+subplot(1,3,1);
+imshow(bi_sweep,[]);
+title('32');
+subplot(1,3,2);
+imshow(bi_sweep1,[]);
+title('256');
+subplot(1,3,3);
+imshow(bi_sweep2,[]);
+title('1024');
