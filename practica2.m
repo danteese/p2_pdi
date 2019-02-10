@@ -34,6 +34,7 @@ imshow(z2,[]);
 title('256');
 subplot(1,3,3);
 imshow(z3,[]);
+colormap(winter(1024));
 title('1024');
 figure
 bi_sweep = bi_sweep/2;
@@ -50,4 +51,5 @@ imshow(bi_sweep1,[]);
 title('256');
 subplot(1,3,3);
 imshow(bi_sweep2,[]);
+colormap(hsv(1024));
 title('1024');
