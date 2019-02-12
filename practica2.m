@@ -53,3 +53,7 @@ subplot(1,3,3);
 imshow(bi_sweep2,[]);
 colormap(hsv(1024));
 title('1024');
+%% Ejercicio 4
+figure
+[z]=semitonos('Foto.jpg');
+imshow(z,[]);
