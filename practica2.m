@@ -34,7 +34,7 @@ imshow(z2,[]);
 title('256');
 subplot(1,3,3);
 imshow(z3,[]);
-colormap(winter(1024));
+colormap(jet(1024));
 title('1024');
 figure
 bi_sweep = bi_sweep/2;
@@ -53,6 +53,29 @@ subplot(1,3,3);
 imshow(bi_sweep2,[]);
 colormap(hsv(1024));
 title('1024');
+
+%% Ejercicio 3
+figure;
+n = [1,3,7,15,31,63,127,255];
+Z3 = mat2gray(z3);
+BI_sweep2 = mat2gray(bi_sweep2);
+for v = 1:1:8
+    %newLevel = bitand(uint8(Z3),(256-n(v)));
+    newLevel = Z3 .* n(v);
+    newLevel = uint8(newLevel);
+    subplot(3,3,v);
+    imshow(newLevel, [])
+    title([num2str(n(v)+1) ' tonos'])
+end
+figure
+for v = 1:1:8
+    newLevel = BI_sweep2 .* n(v);
+    newLevel = uint8(newLevel);
+    subplot(3,3,v);
+    imshow(newLevel, [])
+    title([num2str(n(v)+1) ' tonos'])
+end
+
 %% Ejercicio 4
 figure
 [z]=semitonos('Foto.jpg');
