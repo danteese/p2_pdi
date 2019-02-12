@@ -1,5 +1,8 @@
 function [t, linear_sweep, space_sweep] = barrido( fi, ff, m )
 % Function that generates a sine sweep from fi to ff at m samples.
+%
+% [time, linear_sweep, space_sweep] = barrido(freq_in, freq_fin, muestras)
+%
 % Params: 
 %   fi - initial frequency in h
 %   ff - end frequency in h
